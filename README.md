@@ -1,2 +1,2 @@
 # gerrit-mysql-docker
-Gerrit master with mysl integration
+Gerrit master using mysql database
