@@ -3,7 +3,7 @@
 chown -R gerrit: /var/gerrit/.ssh
 chmod 600 /var/gerrit/.ssh/id_rsa
 
-wait-for-it.sh mysqla:3306 -- echo "Mysql is up"
+wait-for-it.sh mysql:3306 -- echo "Mysql is up"
 sudo -u gerrit rm -Rf /var/gerrit/git/*
 sudo -u gerrit java -jar /var/gerrit/bin/gerrit.war init -d /var/gerrit --batch --install-all-plugins
 
